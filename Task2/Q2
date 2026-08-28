@@ -1,0 +1,39 @@
+let User={
+    name:"Mohamed Gaber",
+    age:21,
+    email:"m.email.com",
+    isAdmin:true
+}
+let sayHiToAdmin=():string=>{
+    return User.isAdmin?"Hi Admin":"";
+}
+console.log(sayHiToAdmin());
+
+//---------------------------------------------------------
+
+class BankAccount {
+    owner: string;
+    balance: number;
+
+    constructor(owner: string, balance: number) {
+        this.owner = owner;
+        this.balance = balance;
+    }
+
+    deposit(x:number): void {
+        this.balance+=x;
+    }
+    withdraw(x:number): void {
+        if(x>this.balance){
+            console.log("There aren't enough money");
+            return;
+        }
+        this.balance-=x;
+    }
+    getBalance():void{
+        console.log(this.balance);
+    }
+}
+
+const person1 = new BankAccount("Gaber", 1.75);
+person1.getBalance();
