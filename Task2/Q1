@@ -1,0 +1,35 @@
+interface Book{
+    id:Number,
+    tital:String,
+    author:String,
+    price:Number,
+    isAvaliable:Boolean
+}
+let user1:Book={
+    id:1,
+    tital:"what's the life?!",
+    author:"I",
+    price:200,
+    isAvaliable:true
+}
+let user2:Book={
+    id:2,
+    tital:"how to live life?!",
+    author:"I",
+    price:200,
+    isAvaliable:false
+}
+
+let display=(b:Book):void=>{
+    console.log(`The Book Information...`);
+    console.log(`id: ${b.id}`);
+    console.log(`tital: ${b.tital}`);
+    console.log(`author: ${b.author}`);
+    console.log(`price: ${b.price}`);
+}
+let isBookAvailable=(b:Book):string=>{
+    return b.isAvaliable?"Avaliable":"NOT Avaliable";
+}
+
+// display(user1)
+// console.log(isBookAvailable(user2));
