@@ -1,0 +1,10 @@
+let processNumber = (x:number,callback:(result: string)=>void) : void=>{
+    const result = x % 2 === 0 ? "Even" : "Odd";
+    callback(result);
+};
+processNumber(10, (result) => {
+    console.log(result);
+});
+processNumber(7, (result) => {
+    console.log(result);
+});
