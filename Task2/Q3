@@ -1,0 +1,14 @@
+//--------A---------
+// A
+// C
+// B
+// Because setTimeout is nonBlock(async) 
+//والكود مش هينفذه الي لما ال 
+//Call Stack يفضى
+//حتي لو الوقت 0
+
+//--------B---------
+console.log("A");
+setTimeout(async() => {
+    console.log("Done!");
+}, 2000);
