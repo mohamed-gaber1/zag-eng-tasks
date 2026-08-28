@@ -1,0 +1,13 @@
+function getData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data received");
+        }, 2000);
+    });
+}
+
+let test=async()=>{
+    const result=await getData();
+    console.log(result);
+}
+test();
